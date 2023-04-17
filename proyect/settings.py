@@ -32,7 +32,7 @@ env = environ.Env()
 SECRET_KEY = 'hkb_y7uvdjtbpo#4)$8dwsp)2ro^3v25+s1kq#j@cjf7+u#qar'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
