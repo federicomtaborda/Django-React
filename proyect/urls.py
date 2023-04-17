@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url
 from django.urls import path, include
+from django.views.generic import RedirectView
 
 from rest_framework import routers
 from rest_framework.documentation import include_docs_urls
@@ -32,6 +33,7 @@ router = DefaultRouter()
 router.extend(router_blog)
 
 urlpatterns = [
+    url(r'^$', RedirectView.as_view(url='/api', permanent=True), name='api'),
     path('admin/', admin.site.urls),
     url('api/', include(router.urls)),
     url('api/docs', include_docs_urls(title='Blog Api', public=False)),
