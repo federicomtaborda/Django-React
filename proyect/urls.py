@@ -22,7 +22,8 @@ from django.views.generic import RedirectView
 from rest_framework import routers
 from rest_framework.documentation import include_docs_urls
 
-from apiblog.urls import router_blog
+#from apiblog.urls import router_blog
+from app_productos.urls import router_productos
 
 
 class DefaultRouter(routers.DefaultRouter):
@@ -31,7 +32,8 @@ class DefaultRouter(routers.DefaultRouter):
 
 
 router = DefaultRouter()
-router.extend(router_blog)
+router.extend(router_productos)
+#router.extend(router_blog)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

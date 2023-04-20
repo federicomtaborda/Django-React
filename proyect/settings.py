@@ -46,10 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app_categorias',
     'app_productos',
     'rest_framework',
-    'apiblog',
 ]
 
 MIDDLEWARE = [
@@ -88,10 +86,17 @@ WSGI_APPLICATION = 'proyect.wsgi.application'
 
 
 #DEPLOY
-DATABASES = {
-    'default': dj_database_url.parse(env("DATABSE_URL"))
-}
+#DATABASES = {
+#    'default': dj_database_url.parse(env("DATABSE_URL"))
+#}
 
+#DATABASE SQLITE3
+DATABASES = {  
+   'default': {  
+     'ENGINE': 'django.db.backends.sqlite3',  
+     'NAME': 'sqlite3',  
+   }  
+ } 
 
 #LOCAL
 # DATABASES = {
