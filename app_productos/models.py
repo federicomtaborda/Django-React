@@ -11,7 +11,7 @@ class Categorias(models.Model):
 
 class Proveedores(models.Model):
     proveedor_nombre = models.CharField(max_length=50)
-    proveedor_nombre = models.CharField(max_length=50)
+    proveedor_apellido = models.CharField(max_length=50)
     proveedor_razon_social = models.CharField(max_length=100)
     proveedor_direccion = models.CharField(max_length=50)
     proveedor_tefefono = models.CharField(max_length=50)
@@ -26,7 +26,7 @@ class Productos(models.Model):
     producto_precio_venta = models.IntegerField()
     producto_stock = models.IntegerField()
     producto_stock_minimo = models.IntegerField()
-    producto_category = models.ForeignKey(Categorias, on_delete=models.PROTECT, related_name='Categoria')
+    producto_categoria = models.ForeignKey(Categorias, on_delete=models.PROTECT, related_name='Categoria')
     producto_proveedor = models.ForeignKey(Proveedores, on_delete=models.PROTECT, related_name='Proveedor')
     
     class Meta:
