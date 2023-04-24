@@ -129,6 +129,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CORS_ORIGIN_WHITELIST = ['http://localhost:5173']
+
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
