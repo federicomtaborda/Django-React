@@ -34,7 +34,7 @@ SECRET_KEY = 'hkb_y7uvdjtbpo#4)$8dwsp)2ro^3v25+s1kq#j@cjf7+u#qar'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -48,10 +48,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app_productos',
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -130,8 +130,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-CORS_ORIGIN_ALLOW_ALL=True
-
+CORS_ORIGIN_WHITELIST = ['http://localhost:5173']
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
